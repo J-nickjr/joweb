@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOBOZOO</title>
+
+  <!-- ✅ 正確 CSS 路徑 -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- ✅ 正確 JS 路徑 -->
+  <script defer src="/js/script.js"></script>
+  <script defer src="/js/index.js"></script>
+  <script defer src="/js/productData.js"></script>
+  <script defer src="/js/search.js"></script>
+  <script defer src="/js/product.js"></script>
+  <script defer src="/js/addToCart.js"></script>
+  <script defer src="/js/cartBadge.js"></script>
+
+  <!-- ✅ icon CDN 保留 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="header-left">
+            <!-- 漢堡 -->
+            <button class="hamburger" id="menu-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <!-- logo -->
+            <div class="header-brand">
+              <a class="brand-link" href="/pages/index.html">
+                <img src="/img/BOBOZOO logo.png" class="brand-logo" alt="logo">
+                <span class="logo-text">BOBOZOO</span>
+              </a>
+            </div>
+
+            <!-- 導覽分類 -->
+            <div class="header-categories desktop-only">
+              <a href="/pages/social.html">社群</a>
+              <a href="/pages/shopping.html">購物</a>
+              <a href="/pages/life.html">室內生活</a>
+            </div>
+          </div>
+
+          <!-- 右側功能列 -->
+          <div class="header-actions">
+            <div class="search-container">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" class="search-input" placeholder="搜尋商品...">
+            </div>
+            <a href="/pages/member.html" title="會員中心"><i class="fa-solid fa-user"></i></a>
+            <a href="/pages/cart.html" class="cart-icon-wrapper" title="購物車">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-count-badge" id="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 手機選單 -->
+        <div class="mobile-menu" id="mobile-menu">
+          <button class="close-btn" id="menu-close"><i class="fa-solid fa-xmark"></i></button>
+          <a href="#">社群</a>
+          <a href="/pages/shopping.html">購物</a>
+          <a href="/pages/life.html">室內生活</a>
+        </div>
+      </div>
+
+      <!-- 導覽列 -->
+      <div class="header-nav-container">
+        <div class="container">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="new.html">新品</a></li>
+            <li><a class="nav-link" href="lighting.html">燈飾</a></li>
+            <li><a class="nav-link" href="storage.html">收納</a></li>
+            <li><a class="nav-link" href="layout.html">佈置</a></li>
+            <li><a class="nav-link" href="tableware.html">餐具</a></li>
+            <li><a class="nav-link" href="bedding.html">寢具</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <div class="main-content">
+        <!-- 主圖 -->
+        <section class="main-image">
+          <img src="/img/situation/living room_1.png" alt="主內容圖片">
+          <div class="main-caption">
+            <h3>無印風格的空間 🤎</h3>
+            <p>@我這裡可以放帳號</p>
+          </div>
+        </section>
+
+        <!-- 輪播圖 -->
+        <aside class="carousel">
+          <div class="carousel-wrapper">
+            <div class="carousel-controls">
+              <button id="prevBtn">‹</button>
+              <button id="nextBtn">›</button>
+            </div>
+
+            <div class="carousel-slide active">
+              <img src="/img/1.png" alt="廣告1" />
+            </div>
+            <div class="carousel-slide">
+              <img src="/img/2.png" alt="廣告2" />
+            </div>
+            <div class="carousel-slide">
+              <img src="/img/3.png" alt="廣告3" />
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <!-- Mellow Poem 滿版動圖區塊 -->
+    <!-- 改為與主內容相同寬度的動圖區塊 -->
+    <section class="main-mellow">
+      <div class="main-content">
+        <div class="mellow-block">
+          <img src="/img/gallery/3260x.gif" alt="Mellow Poem 動圖" class="mellow-img-fixed" />
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="mellow-block">
+          <img src="/img/gallery/3260x1.gif" alt="Mellow Poem 動圖" class="mellow-img-fixed" />
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="mellow-block">
+          <img src="/img/gallery/3260x2.gif" alt="Mellow Poem 動圖" class="mellow-img-fixed" />
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <h2 class="section-title">新品上架 <span class="subtitle">New Arrival</span></h2>
+      <div class="product-grid">
+        <!-- product-item 放這裡 -->
+        <div class="product-item">
+          <img src="/img/new/newaudio1.png" alt="藍牙喇叭">
+          <h4 class="product-title">攜帶型藍牙喇叭</h4>
+          <p class="product-desc">緊湊設計，附掛繩，適合戶外與居家使用</p>
+          <span class="product-price">NT$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/new/newbench1.png" alt="兒童踏凳">
+          <h4 class="product-title">兒童踏凳</h4>
+          <p class="product-desc">輕巧堅固，附防滑設計，適合兒童安全站立</p>
+          <span class="product-price">NT$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/new/newcabinet1.png" alt="收納櫃">
+          <h4 class="product-title">滑輪收納櫃</h4>
+          <p class="product-desc">附輪設計，方便移動，適合辦公或居家使用</p>
+          <span class="product-price">NT$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/new/newglass1.png" alt="玻璃杯組">
+          <h4 class="product-title">復古玻璃杯組</h4>
+          <p class="product-desc">淡綠色調，耐熱玻璃材質，4入組</p>
+          <span class="product-price">NT$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/new/newmattress1.png" alt="彈簧床墊">
+          <h4 class="product-title">單人彈簧床墊</h4>
+          <p class="product-desc">高支撐性彈簧結構，提供良好睡眠支撐</p>
+          <span class="product-price">$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/new/newpillow1.png" alt="抱枕套">
+          <h4 class="product-title">亮黃色抱枕套</h4>
+          <p class="product-desc">鮮明色彩點亮空間，棉質柔軟觸感</p>
+          <span class="product-price">$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/new/newshelves1.png" alt="收納層架">
+          <h4 class="product-title">木質層架</h4>
+          <p class="product-desc">多層設計，適合收納與展示，藍色層板點綴</p>
+          <span class="product-price">$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/new/newsofa1.png" alt="三人座沙發">
+          <h4 class="product-title">三人座布沙發</h4>
+          <p class="product-desc">簡約深灰色設計，舒適座感，適合客廳擺設</p>
+          <span class="product-price">$129</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="single-banner-section">
+      <div class="single-banner-wrapper">
+        <div class="single-banner-slide"><img src="/img/banner/instock1.png" alt="1"></div>
+      </div>
+    </section>
+    
+    <section class="product-section">
+      <h2 class="section-title">現貨專區 <span class="subtitle">In Stock</span></h2>
+      <div class="product-grid">
+        <!-- product-item 放這裡 -->
+        <div class="product-item">
+          <img src="/img/lighting/ceilinglamp1.png" alt="吸頂燈">
+          <h4 class="product-title">LED 吸頂燈</h4>
+          <p class="product-desc">簡約圓形設計，適合臥室與客廳空間照明</p>
+          <span class="product-price">$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/lighting/chandelier1.png" alt="吊燈">
+          <h4 class="product-title">白色吊燈</h4>
+          <p class="product-desc">霧面燈罩，營造柔和光感，適用餐廳與玄關</p>
+          <span class="product-price">$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/storage/storagebox1.png" alt="布質收納袋（附拉鍊）">
+          <h4 class="product-title">布質收納袋</h4>
+          <p class="product-desc">透氣材質，附拉鍊與提把，適合收納衣物或棉被</p>
+          <span class="product-price">$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/storage/storagebox2.png" alt="透明收納箱（加高款）">
+          <h4 class="product-title">加高透明收納箱</h4>
+          <p class="product-desc">堅固耐用，方便堆疊，適合玩具與工具收納</p>
+          <span class="product-price">$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/layout1/doorpanel.png" alt="深色櫃門板">
+          <h4 class="product-title">深胡桃木門板</h4>
+          <p class="product-desc">木紋質感，適用於櫃體門板更換與空間搭配</p>
+          <span class="product-price">$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/layout1/sink.png" alt="黑色方形水槽">
+          <h4 class="product-title">黑色水槽</h4>
+          <p class="product-desc">方形設計，陶瓷塗層抗污耐用，適用現代廚房</p>
+          <span class="product-price">$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/products/seasoningjar1.png" alt="玻璃罐（藍）">
+          <h4 class="product-title">玻璃罐（藍）</h4>
+          <p class="product-desc">密封瓶罐，透明玻璃，13 毫升，復古藍蓋</p>
+          <span class="product-price">$129</span>
+        </div>
+
+        <div class="product-item">
+          <img src="/img/products/seasoningjar2.png" alt="調味罐組">
+          <h4 class="product-title">調味罐組</h4>
+          <p class="product-desc">附蓋瓶罐，透明玻璃，一組 4 入，13 毫升</p>
+          <span class="product-price">$129</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-block footer-logo-block">
+          <img src="/img/BOBOZOO logo.png" alt="BOBOZOO logo" class="footer-logo-img">
+          <h2 class="footer-logo-text">BOBOZOO</h2>
+        </div>
+
+        <div class="footer-block">
+          <h3>Office</h3>
+          <p>123 Anywhere St. Any City ST 12345</p>
+          <p>Tel: +123-456-7890</p>
+          <p>hello@reallygreatsite.com</p>
+        </div>
+
+        <div class="footer-block">
+          <h3>Business hours</h3>
+          <p>Monday - Friday: 9am – 6pm</p>
+          <p>Saturday: 9am – 12pm</p>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+
+      <div class="footer-bottom">
+        <p>Get social</p>
+        <div class="footer-social-icons">
+          <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

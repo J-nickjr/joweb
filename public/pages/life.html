@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOBOZOO Life</title>
+  <!--css-->
+  <link rel="stylesheet" href="/css/style.css">
+  <!--js-->
+  <script defer src="/js/script.js"></script>
+  <script defer src="/js/index.js"></script>
+  <script defer src="/js/cart.js"></script>
+  <script defer src="/js/productData.js"></script>
+  <script defer src="/js/search.js"></script>
+  <script defer src="/js/addToCart.js"></script>
+  <script defer src="/js/cartBadge.js"></script>
+  <!--icon-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="header-left">
+            <!-- 漢堡 -->
+            <button class="hamburger" id="menu-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <!-- logo -->
+            <div class="header-brand">
+              <a class="brand-link" href="/pages/index.html">
+                <img src="/img/BOBOZOO logo.png" class="brand-logo">
+                <span class="logo-text">BOBOZOO</span>
+              </a>
+            </div>
+            <!-- 導覽分類 -->
+            <div class="header-categories desktop-only">
+              <a href="#">社群</a>
+              <a href="#">購物</a>
+              <a href="/pages/life.html">室內生活</a>
+            </div>
+          </div>
+
+          <!-- 右側功能列 -->
+          <div class="header-actions">
+            <div class="search-container">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" class="search-input" placeholder="搜尋商品...">
+            </div>
+            <a href="/pages/member.html" title="會員中心"><i class="fa-solid fa-user"></i></a>
+            <a href="/pages/cart.html" class="cart-icon-wrapper" title="購物車">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-count-badge" id="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 手機選單 -->
+        <div class="mobile-menu" id="mobile-menu">
+          <button class="close-btn" id="menu-close"><i class="fa-solid fa-xmark"></i></button>
+          <a href="#">社群</a>
+          <a href="/pages/shopping.html">購物</a>
+          <a href="/pages/life.html">室內生活</a>
+        </div>
+      </div>
+
+      <!-- 下方導覽列 -->
+      <div class="header-nav-container">
+        <div class="container">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="new.html">新品</a></li>
+            <li><a class="nav-link" href="lighting.html">燈飾</a></li>
+            <li><a class="nav-link" href="storage.html">收納</a></li>
+            <li><a class="nav-link" href="layout.html">佈置</a></li>
+            <li><a class="nav-link" href="tableware.html">餐具</a></li>
+            <li><a class="nav-link" href="bedding.html">寢具</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="life-main-container">
+      <div class="life-container">
+
+        <!-- 上方標題 + 按鈕 -->
+        <div class="life-filter">
+          <h2>空間佈置靈感</h2>
+          <div class="life-filter-buttons">
+            <a href="/pages/life.html" class="life-filter-btn">顯示全部</a>
+            <a href="/pages/life-livingroom.html" class="life-filter-btn">客廳</a>
+            <a href="/pages/life-bedroom.html" class="life-filter-btn">臥室</a>
+            <a href="/pages/life-diningroom.html" class="life-filter-btn">餐廳</a>
+            <a href="/pages/life-storage.html" class="life-filter-btn">收納</a>
+          </div>
+        </div>
+
+        <!-- 下方圖片格線 -->
+        <div class="life-grid">
+          <div class="life-item">
+            <a href="/pages/livingroom_1.html">
+              <img src="/img/situation/living room_1.png" alt="無印風客廳">
+            </a>
+            <p class="life-title">無印風格的室內空間</p>
+          </div>
+          <div class="life-item">
+            <a href="/pages/bedroom_1.html">
+              <img src="/img/situation/bedroom country style.png" alt="北歐鄉村風臥室">
+            </a>
+            <p class="life-title">放下一天的辛勞，好好休息</p>
+          </div>
+          <div class="life-item">
+            <a href="/pages/diningroom_1.html">
+              <img src="/img/situation/Greenery Restaurant.png" alt="綠意餐廳">
+            </a>
+            <p class="life-title">充滿活力的室內空間</p>
+          </div>
+          <div class="life-item">
+            <a href="/pages/Storage_1.html">
+              <img src="/img/situation/Storage_1.png" alt="收納空間">
+            </a>
+            <p class="life-title">收納也可以很美</p>
+          </div>
+          <div class="life-item">
+            <a href="/pages/livingroom_2.html">
+              <img src="/img/situation/living room_2.png" alt="天空藍客聽">
+            </a>
+            <p class="life-title">生活是一種態度</p>
+          </div>
+          <div class="life-item">
+            <a href="/pages/Storage_2.html">
+              <img src="/img/situation/Storage_2.png" alt="收納推車">
+            </a>
+            <p class="life-title">能輕鬆移動的收納推車</p>
+          </div>
+          <div class="life-item">
+            <a href="/pages/bedroom_2.html">
+              <img src="/img/situation/graybedroom.png" alt="灰色臥室">
+            </a>
+            <p class="life-title">灰色靜謐的休息空間</p>
+          </div>
+          <div class="life-item">
+            <a href="/pages/diningroom_2.html">
+              <img src="/img/situation/Restaurant.png" alt="明亮餐廳">
+            </a>
+            <p class="life-title">全家合用的明亮實用廚房</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+
+
+
+
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Logo 區 -->
+        <div class="footer-block footer-logo-block">
+          <img src="/img/bobozoo logo.png" alt="BOBOZOO logo" class="footer-logo-img">
+          <h2 class="footer-logo-text">BOBOZOO</h2>
+        </div>
+
+        <!-- Office 資訊 -->
+        <div class="footer-block">
+          <h3>Office</h3>
+          <p>123 Anywhere St. Any City ST 12345</p>
+          <p>Tel: +123-456-7890</p>
+          <p>hello@reallygreatsite.com</p>
+        </div>
+
+        <!-- 營業時間 -->
+        <div class="footer-block">
+          <h3>Business hours</h3>
+          <p>Monday - Friday: 9am – 6pm</p>
+          <p>Saturday: 9am – 12pm</p>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+
+      <div class="footer-bottom">
+        <p>Get social</p>
+        <div class="footer-social-icons">
+          <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOBOZOO lighting</title>
+
+    <!-- ✅ 正確 CSS 路徑 -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- ✅ 正確 JS 路徑 -->
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/index.js"></script>
+    <script defer src="/js/productData.js"></script>
+    <script defer src="/js/search.js"></script>
+    <script defer src="/js/addToCart.js"></script>
+    <script defer src="/js/cartBadge.js"></script>
+
+    <!-- ✅ icon CDN 保留 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-left">
+                        <!-- 漢堡 -->
+                        <button class="hamburger" id="menu-toggle">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <!-- logo -->
+                        <div class="header-brand">
+                            <a class="brand-link" href="/pages/index.html">
+                                <img src="/img/BOBOZOO logo.png" class="brand-logo" alt="logo">
+                                <span class="logo-text">BOBOZOO</span>
+                            </a>
+                        </div>
+
+                        <!-- 導覽分類 -->
+                        <div class="header-categories desktop-only">
+                            <a href="/pages/social.html">社群</a>
+                            <a href="/pages/shopping.html">購物</a>
+                            <a href="/pages/life.html">室內生活</a>
+                        </div>
+                    </div>
+
+                    <!-- 右側功能列 -->
+                    <div class="header-actions">
+                        <div class="search-container">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" class="search-input" placeholder="搜尋商品...">
+                        </div>
+                        <a href="/pages/member.html" title="會員中心"><i class="fa-solid fa-user"></i></a>
+                        <a href="/pages/cart.html" class="cart-icon-wrapper" title="購物車">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-count-badge" id="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 手機選單 -->
+                <div class="mobile-menu" id="mobile-menu">
+                    <button class="close-btn" id="menu-close"><i class="fa-solid fa-xmark"></i></button>
+                    <a href="#">社群</a>
+                    <a href="/pages/shopping.html">購物</a>
+                    <a href="/pages/life.html">室內生活</a>
+                </div>
+            </div>
+
+            <!-- 導覽列 -->
+            <div class="header-nav-container">
+                <div class="container">
+                    <ul class="nav-list">
+                        <li><a class="nav-link" href="new.html">新品</a></li>
+                        <li><a class="nav-link" href="lighting.html">燈飾</a></li>
+                        <li><a class="nav-link" href="storage.html">收納</a></li>
+                        <li><a class="nav-link" href="layout.html">佈置</a></li>
+                        <li><a class="nav-link" href="tableware.html">餐具</a></li>
+                        <li><a class="nav-link" href="bedding.html">寢具</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- 插入 All Products 標題 -->
+        <div class="all-products-title">
+            <h2>Lighting</h2>
+        </div>
+
+        <main class="main-container">
+            <section class="product-grid">
+                <div class="product-item">
+                    <img src="/img/lighting/ceilinglamp1.png" alt="吸頂燈">
+                    <h4 class="product-title">LED 吸頂燈</h4>
+                    <p class="product-desc">簡約圓形設計，適合臥室與客廳空間照明</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/chandelier1.png" alt="吊燈">
+                    <h4 class="product-title">白色吊燈</h4>
+                    <p class="product-desc">霧面燈罩，營造柔和光感，適用餐廳與玄關</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/lightbulb1.png" alt="LED 燈泡雙入組">
+                    <h4 class="product-title">LED 燈泡（2入組）</h4>
+                    <p class="product-desc">節能省電設計，適合多數燈座與日常照明</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/lightbulb2.png" alt="吸頂小燈">
+                    <h4 class="product-title">迷你吸頂燈</h4>
+                    <p class="product-desc">緊貼天花板設計，適合小空間或過道使用</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/lightbulb3.png" alt="智能燈泡組">
+                    <h4 class="product-title">LED 智能燈泡</h4>
+                    <p class="product-desc">附遙控器，具備調光功能，操作簡便</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/lightbulb4.png" alt="LED 燈條">
+                    <h4 class="product-title">LED 燈條</h4>
+                    <p class="product-desc">可彎曲設計，適用櫥櫃、床底或牆面裝飾</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/lightstrip1.png" alt="USB LED 棒燈">
+                    <h4 class="product-title">LED 條型燈</h4>
+                    <p class="product-desc">細長型結構，適用櫥櫃、書桌下方等狹長空間</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/tablelamp1.png" alt="桌燈">
+                    <h4 class="product-title">簡約桌燈</h4>
+                    <p class="product-desc">現代感造型，適合書房、臥室作為閱讀照明</p>
+                    <span class="product-price">$129</span>
+                </div>
+            </section>
+        </main>
+
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-block footer-logo-block">
+                    <img src="/img/BOBOZOO logo.png" alt="BOBOZOO logo" class="footer-logo-img">
+                    <h2 class="footer-logo-text">BOBOZOO</h2>
+                </div>
+
+                <div class="footer-block">
+                    <h3>Office</h3>
+                    <p>123 Anywhere St. Any City ST 12345</p>
+                    <p>Tel: +123-456-7890</p>
+                    <p>hello@reallygreatsite.com</p>
+                </div>
+
+                <div class="footer-block">
+                    <h3>Business hours</h3>
+                    <p>Monday - Friday: 9am – 6pm</p>
+                    <p>Saturday: 9am – 12pm</p>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>Get social</p>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

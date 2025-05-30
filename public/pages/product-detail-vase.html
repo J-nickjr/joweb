@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOBOZOO vase</title>
+  <!--css-->
+  <link rel="stylesheet" href="/css/style.css">
+  <!--js-->
+  <script defer src="/js/index.js"></script>
+  <script defer src="/js/cart.js"></script>
+  <script defer src="/js/product.js"></script>
+  <script defer src="/js/productData.js"></script>
+  <script defer src="/js/search.js"></script>
+  <script defer src="/js/addToCart.js"></script>
+  <script defer src="/js/cartBadge.js"></script>
+
+  <!--icon-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="header-left">
+            <!-- 漢堡 -->
+            <button class="hamburger" id="menu-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <!-- logo -->
+            <div class="header-brand">
+              <a class="brand-link" href="/pages/index.html">
+                <img src="/img/BOBOZOO logo.png" class="brand-logo">
+                <span class="logo-text">BOBOZOO</span>
+              </a>
+            </div>
+            <!-- 導覽分類 -->
+            <div class="header-categories desktop-only">
+              <a href="#">社群</a>
+              <a href="/pages/shopping.html">購物</a>
+              <a href="/pages/life.html">室內生活</a>
+            </div>
+          </div>
+
+          <!-- 右側功能列 -->
+          <div class="header-actions">
+            <div class="search-container">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" class="search-input" placeholder="搜尋商品...">
+            </div>
+            <a href="/pages/member.html" title="會員中心"><i class="fa-solid fa-user"></i></a>
+            <a href="/pages/cart.html" class="cart-icon-wrapper" title="購物車">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-count-badge" id="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 手機選單（滿版覆蓋） -->
+        <div class="mobile-menu" id="mobile-menu">
+          <button class="close-btn" id="menu-close"><i class="fa-solid fa-xmark"></i></button>
+          <a href="#">社群</a>
+          <a href="/pages/shopping.html">購物</a>
+          <a href="/pages/life.html">室內生活</a>
+        </div>
+      </div>
+
+      <!-- 下方固定導覽列 -->
+      <div class="header-nav-container">
+        <div class="container">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="new.html">新品</a></li>
+            <li><a class="nav-link" href="lighting.html">燈飾</a></li>
+            <li><a class="nav-link" href="storage.html">收納</a></li>
+            <li><a class="nav-link" href="layout.html">佈置</a></li>
+            <li><a class="nav-link" href="tableware.html">餐具</a></li>
+            <li><a class="nav-link" href="bedding.html">寢具</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="product-detail-container">
+      <div class="product-detail-wrapper">
+
+        <!-- 左邊圖片區 -->
+        <div class="product-gallery">
+          <img id="detail-mainImage" src="/img/commodity/vase.png" alt="vase" class="detail-main-image">
+
+          <div class="thumbnail-list">
+            <img src="/img/detail/vase-detail1.png" alt="小圖1" class="thumbnail active-thumbnail"
+              onclick="changeImage(this)">
+            <img src="/img/detail/vase-detail2.png" alt="小圖2" class="thumbnail" onclick="changeImage(this)">
+          </div>
+        </div>
+
+        <!-- 右邊商品資訊 -->
+        <div class="product-info-area">
+          <h1>透明條紋玻璃花瓶</h1>
+          <p class="product-description">自然風格 / 圓弧瓶身造型</p>
+          <p class="product-price">$200</p>
+
+          <!-- 加入購物車按鈕，綁定商品資料 -->
+          <button class="add-to-cart-btn" onclick="addToCartFromButton(this)" data-id="vase-001">
+            加入購物車
+          </button>
+
+          <div class="product-details">
+            <h2>產品資訊</h2>
+            <ul>
+              <li>選用高透明度玻璃，瓶身刻有細緻垂直條紋，展現簡約質感。</li>
+              <li>圓潤瓶型搭配窄口設計，適合單枝或少量花卉擺放。</li>
+              <li>可作為桌面、玄關或收納櫃裝飾使用，增添自然氣息。</li>
+              <li>搭配乾燥花或鮮花皆宜，是居家布置的優雅選擇。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Logo 區 -->
+        <div class="footer-block footer-logo-block">
+          <img src="/img/bobozoo logo.png" alt="BOBOZOO logo" class="footer-logo-img">
+          <h2 class="footer-logo-text">BOBOZOO</h2>
+        </div>
+
+        <!-- Office 資訊 -->
+        <div class="footer-block">
+          <h3>Office</h3>
+          <p>123 Anywhere St. Any City ST 12345</p>
+          <p>Tel: +123-456-7890</p>
+          <p>hello@reallygreatsite.com</p>
+        </div>
+
+        <!-- 營業時間 -->
+        <div class="footer-block">
+          <h3>Business hours</h3>
+          <p>Monday - Friday: 9am – 6pm</p>
+          <p>Saturday: 9am – 12pm</p>
+        </div>
+      </div>
+
+      <hr class="footer-divider">
+
+      <div class="footer-bottom">
+        <p>Get social</p>
+        <div class="footer-social-icons">
+          <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 切換小圖的簡單 JS -->
+  <script>
+    function changeImage(imgElement) {
+      const mainImage = document.getElementById('detail-mainImage');
+
+      // 主圖換成點擊的小圖的 src
+      mainImage.src = imgElement.src;
+
+      // 移除其他小圖的 active 樣式
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active-thumbnail');
+      });
+
+      // 自己加上 active 樣式
+      imgElement.classList.add('active-thumbnail');
+    }
+  </script>
+
+</body>
+
+</html>

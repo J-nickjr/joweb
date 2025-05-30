@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOBOZOO tableware</title>
+
+    <!-- ✅ 正確 CSS 路徑 -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- ✅ 正確 JS 路徑 -->
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/index.js"></script>
+    <script defer src="/js/productData.js"></script>
+    <script defer src="/js/search.js"></script>
+    <script defer src="/js/addToCart.js"></script>
+    <script defer src="/js/cartBadge.js"></script>
+
+    <!-- ✅ icon CDN 保留 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-left">
+                        <!-- 漢堡 -->
+                        <button class="hamburger" id="menu-toggle">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <!-- logo -->
+                        <div class="header-brand">
+                            <a class="brand-link" href="/pages/index.html">
+                                <img src="/img/BOBOZOO logo.png" class="brand-logo" alt="logo">
+                                <span class="logo-text">BOBOZOO</span>
+                            </a>
+                        </div>
+
+                        <!-- 導覽分類 -->
+                        <div class="header-categories desktop-only">
+                            <a href="/pages/social.html">社群</a>
+                            <a href="/pages/shopping.html">購物</a>
+                            <a href="/pages/life.html">室內生活</a>
+                        </div>
+                    </div>
+
+                    <!-- 右側功能列 -->
+                    <div class="header-actions">
+                        <div class="search-container">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" class="search-input" placeholder="搜尋商品...">
+                        </div>
+                        <a href="/pages/member.html" title="會員中心"><i class="fa-solid fa-user"></i></a>
+                        <a href="/pages/cart.html" class="cart-icon-wrapper" title="購物車">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-count-badge" id="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 手機選單 -->
+                <div class="mobile-menu" id="mobile-menu">
+                    <button class="close-btn" id="menu-close"><i class="fa-solid fa-xmark"></i></button>
+                    <a href="#">社群</a>
+                    <a href="/pages/shopping.html">購物</a>
+                    <a href="/pages/life.html">室內生活</a>
+                </div>
+            </div>
+
+            <!-- 導覽列 -->
+            <div class="header-nav-container">
+                <div class="container">
+                    <ul class="nav-list">
+                        <li><a class="nav-link" href="new">新品</a></li>
+                        <li><a class="nav-link" href="lighting.html">燈飾</a></li>
+                        <li><a class="nav-link" href="storage.html">收納</a></li>
+                        <li><a class="nav-link" href="layout.html">佈置</a></li>
+                        <li><a class="nav-link" href="tableware.html">餐具</a></li>
+                        <li><a class="nav-link" href="bedding.html">寢具</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- 插入 All Products 標題 -->
+        <div class="all-products-title">
+            <h2>Tableware</h2>
+        </div>        
+        <main class="main-container">
+            <section class="product-grid">
+                <div class="product-item">
+                    <img src="/img/products/spoon1.png" alt="黑色不鏽鋼餐具組">
+                    <h4 class="product-title">黑色不鏽鋼餐具組</h4>
+                    <p class="product-desc">含刀叉匙共 4 件，時尚黑色設計，適合日常與宴客使用</p>
+                    <span class="product-price">$129</span>
+                </div>                  
+
+                <div class="product-item">
+                    <img src="/img/products/spoon2.png" alt="餐具組">
+                    <h4 class="product-title">餐具組</h4>
+                    <p class="product-desc">不鏽鋼，基本 16 件組</p>
+                    <span class="product-price">$149</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/plate1.png" alt="白色瓷盤">
+                    <h4 class="product-title">白色瓷盤</h4>
+                    <p class="product-desc">簡約設計，適用日常餐桌，直徑約 27 公分</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/crisperbox1.png" alt="方形保鮮盒">
+                    <h4 class="product-title">保鮮盒（組）</h4>
+                    <p class="product-desc">附蓋透明玻璃，堆疊收納方便，130ml～500ml</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/seasoningjar1.png" alt="玻璃罐（藍）">
+                    <h4 class="product-title">玻璃罐（藍）</h4>
+                    <p class="product-desc">密封瓶罐，透明玻璃，13 毫升，復古藍蓋</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/seasoningjar2.png" alt="調味罐組">
+                    <h4 class="product-title">調味罐組</h4>
+                    <p class="product-desc">附蓋瓶罐，透明玻璃，一組 4 入，13 毫升</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/chopsticks1.png" alt="筷子組">
+                    <h4 class="product-title">不鏽鋼筷</h4>
+                    <p class="product-desc">簡約設計，耐用易清洗，1 組 4 雙</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/mug1.png" alt="深藍馬克杯">
+                    <h4 class="product-title">馬克杯（深藍）</h4>
+                    <p class="product-desc">陶瓷材質，握感舒適，容量約 300ml</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/mug2.png" alt="白色馬克杯">
+                    <h4 class="product-title">馬克杯（白）</h4>
+                    <p class="product-desc">簡約造型，直條紋設計，容量約 300ml</p>
+                    <span class="product-price">$129</span>
+                </div>
+            </section>
+        </main>
+
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-block footer-logo-block">
+                    <img src="/img/BOBOZOO logo.png" alt="BOBOZOO logo" class="footer-logo-img">
+                    <h2 class="footer-logo-text">BOBOZOO</h2>
+                </div>
+
+                <div class="footer-block">
+                    <h3>Office</h3>
+                    <p>123 Anywhere St. Any City ST 12345</p>
+                    <p>Tel: +123-456-7890</p>
+                    <p>hello@reallygreatsite.com</p>
+                </div>
+
+                <div class="footer-block">
+                    <h3>Business hours</h3>
+                    <p>Monday - Friday: 9am – 6pm</p>
+                    <p>Saturday: 9am – 12pm</p>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>Get social</p>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

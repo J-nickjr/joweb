@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOBOZOO shopping</title>
+
+    <!-- ✅ 正確 CSS 路徑 -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- ✅ 正確 JS 路徑 -->
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/index.js"></script>
+    <script defer src="/js/productData.js"></script>
+    <script defer src="/js/search.js"></script>
+    <script defer src="/js/addToCart.js"></script>
+    <script defer src="/js/cartBadge.js"></script>
+
+    <!-- ✅ icon CDN 保留 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-left">
+                        <!-- 漢堡 -->
+                        <button class="hamburger" id="menu-toggle">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <!-- logo -->
+                        <div class="header-brand">
+                            <a class="brand-link" href="/pages/index.html">
+                                <img src="/img/BOBOZOO logo.png" class="brand-logo" alt="logo">
+                                <span class="logo-text">BOBOZOO</span>
+                            </a>
+                        </div>
+
+                        <!-- 導覽分類 -->
+                        <div class="header-categories desktop-only">
+                            <a href="/pages/social.html">社群</a>
+                            <a href="/pages/shopping.html">購物</a>
+                            <a href="/pages/life.html">室內生活</a>
+                        </div>
+                    </div>
+
+                    <!-- 右側功能列 -->
+                    <div class="header-actions">
+                        <div class="search-container">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" class="search-input" placeholder="搜尋商品...">
+                        </div>
+                        <a href="/pages/member.html" title="會員中心"><i class="fa-solid fa-user"></i></a>
+                        <a href="/pages/cart.html" class="cart-icon-wrapper" title="購物車">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart-count-badge" id="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 手機選單 -->
+                <div class="mobile-menu" id="mobile-menu">
+                    <button class="close-btn" id="menu-close"><i class="fa-solid fa-xmark"></i></button>
+                    <a href="#">社群</a>
+                    <a href="/pages/shopping.html">購物</a>
+                    <a href="/pages/life.html">室內生活</a>
+                </div>
+            </div>
+
+            <!-- 導覽列 -->
+            <div class="header-nav-container">
+                <div class="container">
+                    <ul class="nav-list">
+                        <li><a class="nav-link" href="new.html">新品</a></li>
+                        <li><a class="nav-link" href="lighting.html">燈飾</a></li>
+                        <li><a class="nav-link" href="storage.html">收納</a></li>
+                        <li><a class="nav-link" href="layout.html">佈置</a></li>
+                        <li><a class="nav-link" href="tableware.html">餐具</a></li>
+                        <li><a class="nav-link" href="bedding.html">寢具</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- 插入 All Products 標題 -->
+        <div class="all-products-title">
+            <h2>All Products</h2>
+        </div>
+
+        <main class="main-container">
+            <section class="product-grid">
+                <div class="product-item">
+                    <img src="/img/bedding/bed1.png" alt="白色收納床架">
+                    <h4 class="product-title">白色收納床架</h4>
+                    <p class="product-desc">附抽屜設計，兼具收納功能與簡約風格，適合現代臥室</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed2.png" alt="米色繃布床架">
+                    <h4 class="product-title">米色繃布床架</h4>
+                    <p class="product-desc">柔軟靠墊床頭設計，兼具舒適與質感，營造溫馨氛圍</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed3.png" alt="多抽屜收納床架">
+                    <h4 class="product-title">多抽屜床架</h4>
+                    <p class="product-desc">加大收納空間，適合小坪數空間的理想選擇</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed4.png" alt="白色金屬床架">
+                    <h4 class="product-title">白色金屬床架</h4>
+                    <p class="product-desc">經典線條設計，金屬結構穩固，打造清新簡約臥室</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed5.png" alt="單人床收納床架">
+                    <h4 class="product-title">單人床收納床架</h4>
+                    <p class="product-desc">側邊雙層抽屜設計，提供額外收納空間，實用又省空間</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed6.png" alt="木質床架含床墊">
+                    <h4 class="product-title">木質床架含床墊</h4>
+                    <p class="product-desc">自然色木質設計，搭配舒適床墊，簡約又實用</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed7.png" alt="雙人床架（黑）">
+                    <h4 class="product-title">雙人床架（黑）</h4>
+                    <p class="product-desc">黑色床框搭配簡約床頭板，營造俐落現代風格</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed8.png" alt="米色布面床架">
+                    <h4 class="product-title">米色布面床架</h4>
+                    <p class="product-desc">床頭靠墊柔軟舒適，北歐風格設計，適合各類臥室風格</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/spoon1.png" alt="黑色不鏽鋼餐具組">
+                    <h4 class="product-title">黑色不鏽鋼餐具組</h4>
+                    <p class="product-desc">含刀叉匙共 4 件，時尚黑色設計，適合日常與宴客使用</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/spoon2.png" alt="餐具組">
+                    <h4 class="product-title">餐具組</h4>
+                    <p class="product-desc">不鏽鋼，基本 16 件組</p>
+                    <span class="product-price">$149</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/plate1.png" alt="白色瓷盤">
+                    <h4 class="product-title">白色瓷盤</h4>
+                    <p class="product-desc">簡約設計，適用日常餐桌，直徑約 27 公分</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/crisperbox1.png" alt="方形保鮮盒">
+                    <h4 class="product-title">保鮮盒（組）</h4>
+                    <p class="product-desc">附蓋透明玻璃，堆疊收納方便，130ml～500ml</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/seasoningjar1.png" alt="玻璃罐（藍）">
+                    <h4 class="product-title">玻璃罐（藍）</h4>
+                    <p class="product-desc">密封瓶罐，透明玻璃，13 毫升，復古藍蓋</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/seasoningjar2.png" alt="調味罐組">
+                    <h4 class="product-title">調味罐組</h4>
+                    <p class="product-desc">附蓋瓶罐，透明玻璃，一組 4 入，13 毫升</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/chopsticks1.png" alt="筷子組">
+                    <h4 class="product-title">不鏽鋼筷</h4>
+                    <p class="product-desc">簡約設計，耐用易清洗，1 組 4 雙</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/mug1.png" alt="深藍馬克杯">
+                    <h4 class="product-title">馬克杯（深藍）</h4>
+                    <p class="product-desc">陶瓷材質，握感舒適，容量約 300ml</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/products/mug2.png" alt="白色馬克杯">
+                    <h4 class="product-title">馬克杯（白）</h4>
+                    <p class="product-desc">簡約造型，直條紋設計，容量約 300ml</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newaudio1.png" alt="藍牙喇叭">
+                    <h4 class="product-title">攜帶型藍牙喇叭</h4>
+                    <p class="product-desc">緊湊設計，附掛繩，適合戶外與居家使用</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newbench1.png" alt="兒童腳凳">
+                    <h4 class="product-title">兒童踏凳</h4>
+                    <p class="product-desc">輕巧堅固，附防滑設計，適合兒童安全站立</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newcabinet1.png" alt="活動收納櫃">
+                    <h4 class="product-title">滑輪收納櫃</h4>
+                    <p class="product-desc">附輪設計，方便移動，適合辦公或居家使用</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newglass1.png" alt="玻璃杯組">
+                    <h4 class="product-title">復古玻璃杯組</h4>
+                    <p class="product-desc">淡綠色調，耐熱玻璃材質，4入組</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newmattress1.png" alt="彈簧床墊">
+                    <h4 class="product-title">單人彈簧床墊</h4>
+                    <p class="product-desc">高支撐性彈簧結構，提供良好睡眠支撐</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newpillow1.png" alt="抱枕套">
+                    <h4 class="product-title">亮黃色抱枕套</h4>
+                    <p class="product-desc">鮮明色彩點亮空間，棉質柔軟觸感</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newshelves1.png" alt="收納層架">
+                    <h4 class="product-title">木質層架</h4>
+                    <p class="product-desc">多層設計，適合收納與展示，藍色層板點綴</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newsofa1.png" alt="三人座沙發">
+                    <h4 class="product-title">三人座布沙發</h4>
+                    <p class="product-desc">簡約深灰色設計，舒適座感，適合客廳擺設</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newsofa2.png" alt="彩色沙發椅">
+                    <h4 class="product-title">彩色沙發椅</h4>
+                    <p class="product-desc">鮮豔條紋設計，為空間增添活潑氛圍</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newtable1.png" alt="白色餐桌">
+                    <h4 class="product-title">簡約餐桌</h4>
+                    <p class="product-desc">白色桌面，金屬桌腳，適合兩至四人使用</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newtable2.png" alt="升降書桌">
+                    <h4 class="product-title">可調式升降書桌</h4>
+                    <p class="product-desc">適合久坐工作者，自由切換站姿與坐姿</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newtablelamp1.png" alt="復古綠桌燈">
+                    <h4 class="product-title">復古桌燈</h4>
+                    <p class="product-desc">曲線造型，柔和燈光，適合閱讀與裝飾</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newtablelamp2.png" alt="現代桌燈">
+                    <h4 class="product-title">簡約桌燈</h4>
+                    <p class="product-desc">流線造型設計，提供溫暖光源</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/new/newtub1.png" alt="收納盆">
+                    <h4 class="product-title">多功能收納盆</h4>
+                    <p class="product-desc">可摺疊設計，適合收納衣物或清潔使用</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/ceilinglamp1.png" alt="吸頂燈">
+                    <h4 class="product-title">LED 吸頂燈</h4>
+                    <p class="product-desc">簡約圓形設計，適合臥室與客廳空間照明</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/chandelier1.png" alt="吊燈">
+                    <h4 class="product-title">白色吊燈</h4>
+                    <p class="product-desc">霧面燈罩，營造柔和光感，適用餐廳與玄關</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/lightbulb1.png" alt="LED 燈泡雙入組">
+                    <h4 class="product-title">LED 燈泡（2入組）</h4>
+                    <p class="product-desc">節能省電設計，適合多數燈座與日常照明</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/lightbulb2.png" alt="吸頂小燈">
+                    <h4 class="product-title">迷你吸頂燈</h4>
+                    <p class="product-desc">緊貼天花板設計，適合小空間或過道使用</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/lightbulb3.png" alt="智能燈泡組">
+                    <h4 class="product-title">LED 智能燈泡</h4>
+                    <p class="product-desc">附遙控器，具備調光功能，操作簡便</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/lightbulb4.png" alt="LED 燈條">
+                    <h4 class="product-title">LED 燈條</h4>
+                    <p class="product-desc">可彎曲設計，適用櫥櫃、床底或牆面裝飾</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/lightstrip1.png" alt="USB LED 棒燈">
+                    <h4 class="product-title">LED 條型燈</h4>
+                    <p class="product-desc">細長型結構，適用櫥櫃、書桌下方等狹長空間</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/lighting/tablelamp1.png" alt="桌燈">
+                    <h4 class="product-title">簡約桌燈</h4>
+                    <p class="product-desc">現代感造型，適合書房、臥室作為閱讀照明</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/storage/storagebox1.png" alt="布質收納袋（附拉鍊）">
+                    <h4 class="product-title">布質收納袋</h4>
+                    <p class="product-desc">透氣材質，附拉鍊與提把，適合收納衣物或棉被</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/storage/storagebox2.png" alt="透明收納箱（加高款）">
+                    <h4 class="product-title">加高透明收納箱</h4>
+                    <p class="product-desc">堅固耐用，方便堆疊，適合玩具與工具收納</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/storage/storagebox3.png" alt="米色手提收納籃">
+                    <h4 class="product-title">手提收納籃</h4>
+                    <p class="product-desc">極簡風格設計，附提把，適合衛浴與雜物分類</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/storage/storagebox4.png" alt="透明低桶收納箱">
+                    <h4 class="product-title">低桶透明收納箱</h4>
+                    <p class="product-desc">適合床底、衣櫃使用，可視內容物，易整理</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/storage/storagebox5.png" alt="大容量透明收納箱">
+                    <h4 class="product-title">大容量收納箱</h4>
+                    <p class="product-desc">加厚塑膠材質，適合季節性衣物與大型物品</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/storage/storagebox6.png" alt="白色立方收納盒">
+                    <h4 class="product-title">立方收納盒</h4>
+                    <p class="product-desc">霧面白色設計，適合書櫃與層架系統搭配</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/storage/storagebox7.png" alt="牛皮紙收納箱（附蓋）">
+                    <h4 class="product-title">牛皮紙收納箱</h4>
+                    <p class="product-desc">環保材質，附蓋設計，適合檔案與雜物收納</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/storage/storagebox8.png" alt="米色手提收納籃">
+                    <h4 class="product-title">手提收納籃</h4>
+                    <p class="product-desc">霧白配色，輕便好提，適合浴室、廚房雜物分類</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/layout1/chair.png" alt="白色餐椅">
+                    <h4 class="product-title">白色餐椅</h4>
+                    <p class="product-desc">人體工學椅身，搭配原木椅腳，適合餐廳與書房使用</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/layout1/chandelier.png" alt="吊燈燈具">
+                    <h4 class="product-title">現代吊燈</h4>
+                    <p class="product-desc">經典黑白配色，適用於餐廳、玄關或臥室照明</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/layout1/doorpanel.png" alt="深色櫃門板">
+                    <h4 class="product-title">深胡桃木門板</h4>
+                    <p class="product-desc">木紋質感，適用於櫃體門板更換與空間搭配</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/layout1/doorpanel.png" alt="深色櫃門板">
+                    <h4 class="product-title">深胡桃木門板</h4>
+                    <p class="product-desc">木紋質感，適用於櫃體門板更換與空間搭配</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/layout1/faucet.png" alt="黑色水龍頭">
+                    <h4 class="product-title">黑色水龍頭</h4>
+                    <p class="product-desc">霧面質感，單孔設計，適用廚房與洗手台</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/layout1/rollingdoor.png" alt="滑門櫃體">
+                    <h4 class="product-title">滑門櫃體</h4>
+                    <p class="product-desc">黑色百葉門設計，內部空間寬敞，適合玄關與收納</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/layout1/sink.png" alt="黑色方形水槽">
+                    <h4 class="product-title">黑色水槽</h4>
+                    <p class="product-desc">方形設計，陶瓷塗層抗污耐用，適用現代廚房</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed1.png" alt="白色收納床架">
+                    <h4 class="product-title">白色收納床架</h4>
+                    <p class="product-desc">附抽屜設計，兼具收納功能與簡約風格，適合現代臥室</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed2.png" alt="米色繃布床架">
+                    <h4 class="product-title">米色繃布床架</h4>
+                    <p class="product-desc">柔軟靠墊床頭設計，兼具舒適與質感，營造溫馨氛圍</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed3.png" alt="多抽屜收納床架">
+                    <h4 class="product-title">多抽屜床架</h4>
+                    <p class="product-desc">加大收納空間，適合小坪數空間的理想選擇</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed4.png" alt="白色金屬床架">
+                    <h4 class="product-title">白色金屬床架</h4>
+                    <p class="product-desc">經典線條設計，金屬結構穩固，打造清新簡約臥室</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed5.png" alt="單人床收納床架">
+                    <h4 class="product-title">單人床收納床架</h4>
+                    <p class="product-desc">側邊雙層抽屜設計，提供額外收納空間，實用又省空間</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed6.png" alt="木質床架含床墊">
+                    <h4 class="product-title">木質床架含床墊</h4>
+                    <p class="product-desc">自然色木質設計，搭配舒適床墊，簡約又實用</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed7.png" alt="雙人床架（黑）">
+                    <h4 class="product-title">雙人床架（黑）</h4>
+                    <p class="product-desc">黑色床框搭配簡約床頭板，營造俐落現代風格</p>
+                    <span class="product-price">$129</span>
+                </div>
+
+                <div class="product-item">
+                    <img src="/img/bedding/bed8.png" alt="米色布面床架">
+                    <h4 class="product-title">米色布面床架</h4>
+                    <p class="product-desc">床頭靠墊柔軟舒適，北歐風格設計，適合各類臥室風格</p>
+                    <span class="product-price">$129</span>
+                </div>
+            </section>
+        </main>
+
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-block footer-logo-block">
+                    <img src="/img/BOBOZOO logo.png" alt="BOBOZOO logo" class="footer-logo-img">
+                    <h2 class="footer-logo-text">BOBOZOO</h2>
+                </div>
+
+                <div class="footer-block">
+                    <h3>Office</h3>
+                    <p>123 Anywhere St. Any City ST 12345</p>
+                    <p>Tel: +123-456-7890</p>
+                    <p>hello@reallygreatsite.com</p>
+                </div>
+
+                <div class="footer-block">
+                    <h3>Business hours</h3>
+                    <p>Monday - Friday: 9am – 6pm</p>
+                    <p>Saturday: 9am – 12pm</p>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>Get social</p>
+                <div class="footer-social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
