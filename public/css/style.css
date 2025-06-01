@@ -1172,10 +1172,27 @@ a {
 }
 
 /* footer 貼底設定 */
+/* html, body {
+  height: 100%;
+  margin: 0; */
+/* 保證 body 與 html 撐滿整個頁面 */
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
+
+/* 建立一個 flex 容器讓 footer 貼底 */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 讓 main 撐滿剩下的空間 */
+main {
+  flex: 1;
+}
+
 
 .page-wrapper {
   display: flex;
